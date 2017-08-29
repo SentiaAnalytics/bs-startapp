@@ -49,3 +49,34 @@ test "should update state and rerender on dispatch" (fun t => {
   dispatch IncAsync;
   expected := 6;
  });
+
+test "should call onLoad on load" (fun t => {
+  t.plan 1;
+  let _ = Startapp.make
+    init::5
+    update::(fun _ s => (s, noEff))
+    render::(fun _ _ => ())
+    onLoad::(fun s _=> t.ok message::"state should be 5" (s == 5))
+    ();
+});
+test "should call onAction after dispatch" (fun t => {
+  t.plan 1;
+  let dispatch = Startapp.make
+    init::5
+    update::(fun _ s => (s, noEff))
+    render::(fun _ _ => ())
+    onAction::(fun a => t.ok message::"action should be Inc" (a == Inc))
+    ();
+  dispatch Inc;
+});
+
+test "should call onUpdate after update" (fun t => {
+  t.plan 1;
+  let dispatch = Startapp.make
+    init::5
+    update::(fun _ s => (s, noEff))
+    render::(fun _ _ => ())
+    onUpdate::(fun s => t.ok message::"action should be Inc" (s == 5))
+    ();
+  dispatch Inc;
+});
