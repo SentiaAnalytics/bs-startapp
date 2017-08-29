@@ -1,0 +1,17 @@
+{
+  "name": "bs-startapp",
+  "version": "0.1.0",
+  "sources": [
+    {"dir": "src"},
+    {"dir": "test", "type": "dev"}
+  ],
+  "bsc-flags": ["-bs-super-errors"],
+  "bs-dependencies" : [
+      // add your bs-dependencies here 
+  ],
+  
+  "bs-dev-dependencies" : [
+    "bs-tape",
+    "bs-promise"
+  ]
+}
