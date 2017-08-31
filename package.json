@@ -1,5 +1,5 @@
 {
-  "name": "bs-startapp",
+  "name": "sentia/bs-startapp",
   "version": "2.0.0",
   "scripts": {
     "clean": "bsb -clean-world",
