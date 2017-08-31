@@ -1,5 +1,5 @@
 {
-  "name": "sentia.bs.startapp",
+  "name": "bs-sentia-startapp",
   "version": "2.0.0",
   "scripts": {
     "clean": "bsb -clean-world",
@@ -14,10 +14,10 @@
   "license": "MIT",
   "devDependencies": {
     "bs-platform": "1.9.0",
-    "sentia.bs.tape": "^0.2.0",
+    "bs-sentia-tape": "^0.2.1",
     "tap-spec": "^4.1.1"
   },
   "dependencies": {
-    "sentia.bs.promise": "^0.2.0"
+    "bs-sentia-promise": "^0.2.1"
   }
 }
